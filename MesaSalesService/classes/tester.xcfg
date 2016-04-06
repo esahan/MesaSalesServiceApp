@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.natica.sales.model.SalesModule">
+      <AppModuleConfig name="152EFE17064" DBconnection="java:comp/env/jdbc/Mesa8050DS" ApplicationName="com.natica.sales.model.SalesModule" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" JDBCName="Mesa8050" BC4JConfigName="SalesModuleLocal" jbo.project="com.natica.sales.model.MesaSalesService">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="com.natica.sales.model.SalesModule"/>
+         <Tester FullProxyInterfaceName="com.natica.sales.model.common.SalesModule"/>
+         <Custom LastUsedConfiguration="SalesModuleLocal" JDBCDataSource="java:comp/env/jdbc/Mesa8050DS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

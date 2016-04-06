@@ -1,0 +1,21 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="/com/natica/sales/model/views/response/common/"
+     xmlns="/com/natica/sales/model/views/response/common/" elementFormDefault="qualified"
+     sdoJava:package="com.natica.sales.model.views.response.common">
+    <xsd:annotation>
+        <xsd:documentation>Smarts Crud Response</xsd:documentation>
+    </xsd:annotation>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="SmartsCrudResponseSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/"/>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="ResponseCode" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="Message" type="xsd:string" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="smartsCrudResponseSDO" type="SmartsCrudResponseSDO"/>
+</xsd:schema>

@@ -1,0 +1,22 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     targetNamespace="/com/natica/sales/model/views/common/" xmlns="/com/natica/sales/model/views/common/"
+     elementFormDefault="qualified" sdoJava:package="com.natica.sales.model.views.common">
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="SmartsVaziyetViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>ProjectId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ProjectId" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="DosyaIsmi" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="CreationDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="LastUpdateDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="smartsVaziyetViewSDO" type="SmartsVaziyetViewSDO"/>
+</xsd:schema>

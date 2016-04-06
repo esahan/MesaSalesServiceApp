@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="windows-1254" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SmartsGyrmnklGorselView"
+  Version="11.1.2.61.83"
+  SelectList="XxntcSmartsGyrmnklGorsel.GAYRIMENKUL_GORSEL_ID, 
+       XxntcSmartsGyrmnklGorsel.GAYRIMENKUL_ID, 
+       XxntcSmartsGyrmnklGorsel.DOSYA_ADI, 
+       XxntcSmartsGyrmnklGorsel.BASLIK, 
+       XxntcSmartsGyrmnklGorsel.TIP, 
+       XxntcSmartsGyrmnklGorsel.SIRA, 
+       XxntcSmartsGyrmnklGorsel.CREATION_DATE, 
+       XxntcSmartsGyrmnklGorsel.LAST_UPDATE_DATE"
+  FromList="XXNTC.XXNTC_SMARTS_GYRMNKL_GORSEL XxntcSmartsGyrmnklGorsel"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  RowClass="com.natica.sales.model.views.SmartsGyrmnklGorselViewRowImpl"
+  ComponentClass="com.natica.sales.model.views.SmartsGyrmnklGorselViewImpl"
+  SdoGen="true"
+  SdoName="SmartsGyrmnklGorselViewSDO"
+  SdoNameSpace="/com/natica/sales/model/views/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <EntityUsage
+    Name="XxntcSmartsGyrmnklGorsel"
+    Entity="com.natica.sales.model.entities.SmartsGyrmnklGorsel"/>
+  <ViewAttribute
+    Name="GayrimenkulGorselId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="GayrimenkulGorselId"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="GAYRIMENKUL_GORSEL_ID"/>
+  <ViewAttribute
+    Name="GayrimenkulId"
+    PrecisionRule="true"
+    EntityAttrName="GayrimenkulId"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="GAYRIMENKUL_ID"/>
+  <ViewAttribute
+    Name="DosyaAdi"
+    PrecisionRule="true"
+    EntityAttrName="DosyaAdi"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="DOSYA_ADI"/>
+  <ViewAttribute
+    Name="Baslik"
+    PrecisionRule="true"
+    EntityAttrName="Baslik"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="BASLIK"/>
+  <ViewAttribute
+    Name="Tip"
+    PrecisionRule="true"
+    EntityAttrName="Tip"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="TIP"/>
+  <ViewAttribute
+    Name="Sira"
+    PrecisionRule="true"
+    EntityAttrName="Sira"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="SIRA"/>
+  <ViewAttribute
+    Name="CreationDate"
+    PrecisionRule="true"
+    EntityAttrName="CreationDate"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="CREATION_DATE"/>
+  <ViewAttribute
+    Name="LastUpdateDate"
+    PrecisionRule="true"
+    EntityAttrName="LastUpdateDate"
+    EntityUsage="XxntcSmartsGyrmnklGorsel"
+    AliasName="LAST_UPDATE_DATE"/>
+</ViewObject>

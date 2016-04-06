@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="windows-1254" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UnitsView"
+  Version="11.1.2.61.83"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  RowClass="com.natica.sales.model.views.UnitsViewRowImpl"
+  SdoGen="true"
+  SdoName="UnitsViewSDO"
+  SdoNameSpace="/com/natica/sales/model/views/common/">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="com.natica.sales.model.views.UnitsView_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <Variable
+    Name="pProjectId"
+    Kind="where"
+    Type="java.math.BigDecimal"/>
+  <SQLQuery><![CDATA[select xsu.unit_id gayrimenkul_id,
+       xsp.project_id proje_id,
+       xsp.project_name proje_adi,
+       xsps.stage_id etap_id,
+       xsps.stage_name etap_adi,
+       xspb.block_id blok_id,
+       xspb.block_name blok_adi,
+       xsu.name gayrimenkul_adi,
+       xsu.floor kat,
+       xsu.daire_no daire_no,
+       xspu.unit_name daire_tipi,
+       xxntc_mesa_Sales_pkg.get_lov_value(xsu.front_id) cephe,
+       xsu.area net_alan_m2,
+       xsu.alan_brut brut_alan_m2,
+       xsup.price guncel_liste_fiyati,
+       xsu.konut_statusu
+  from xxntc_sales_units xsu,
+       xxntc_sales_projects xsp,
+       xxntc_sales_project_stages xsps,
+       xxntc_sales_project_blocks xspb,
+       xxntc_sales_project_units xspu,
+       (select price, unit_id from xxntc_sales_unit_prices xsup where trunc(sysdate) between xsup.effective_date and xsup.effective_end_date) xsup
+ where xsu.project_id = xsp.project_id
+   and xsu.stage_id = xsps.stage_id
+   and xsu.block_id = xspb.block_id
+   and xsu.unit_type_id = xspu.unit_id
+   and xsu.unit_id = xsup.unit_id]]></SQLQuery>
+  <ViewAttribute
+    Name="GayrimenkulId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="GAYRIMENKUL_ID"
+    Expression="GAYRIMENKUL_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ProjeId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="PROJE_ID"
+    Expression="PROJE_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ProjeAdi"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="240"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PROJE_ADI"
+    Expression="PROJE_ADI"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="EtapId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="ETAP_ID"
+    Expression="ETAP_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="EtapAdi"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="240"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ETAP_ADI"
+    Expression="ETAP_ADI"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="BlokId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="BLOK_ID"
+    Expression="BLOK_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="BlokAdi"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="240"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="BLOK_ADI"
+    Expression="BLOK_ADI"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="GayrimenkulAdi"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="240"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="GAYRIMENKUL_ADI"
+    Expression="GAYRIMENKUL_ADI"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Kat"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="KAT"
+    Expression="KAT"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DaireNo"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="10"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DAIRE_NO"
+    Expression="DAIRE_NO"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DaireTipi"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="240"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DAIRE_TIPI"
+    Expression="DAIRE_TIPI"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Cephe"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="4000"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="CEPHE"
+    Expression="CEPHE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="NetAlanM2"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="NET_ALAN_M2"
+    Expression="NET_ALAN_M2"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="BrutAlanM2"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="BRUT_ALAN_M2"
+    Expression="BRUT_ALAN_M2"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="GuncelListeFiyati"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="GUNCEL_LISTE_FIYATI"
+    Expression="GUNCEL_LISTE_FIYATI"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="KonutStatusu"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="KONUT_STATUSU"
+    Expression="KONUT_STATUSU"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="UnitsViewCriteriaByProject"
+    ViewObjectName="com.natica.sales.model.views.UnitsView"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="UnitsViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="ProjeId"
+        ViewAttribute="ProjeId"
+        Operator="="
+        Conjunction="AND"
+        Value=":pProjectId"
+        GenerateIsNullClauseForBindVars="false"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.natica.sales.model.MesaSalesServiceBundle"/>
+  </ResourceBundle>
+</ViewObject>

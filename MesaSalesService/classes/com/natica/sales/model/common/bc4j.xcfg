@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.natica.sales.model.SalesModule">
+      <AppModuleConfig name="SalesModuleLocal" jbo.project="com.natica.sales.model.MesaSalesService" ApplicationName="com.natica.sales.model.SalesModule" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="com.natica.sales.model.SalesModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/Mesa8050DS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="SalesModuleShared" jbo.project="com.natica.sales.model.MesaSalesService" ApplicationName="com.natica.sales.model.SalesModule" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="com.natica.sales.model.SalesModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/Mesa8050DS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="SalesModuleService" jbo.project="com.natica.sales.model.MesaSalesService" ApplicationName="com.natica.sales.model.SalesModule" DeployPlatform="SI">
+         <AM-Pooling jbo.ampool.resetnontransactionalstate="true"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="com.natica.sales.model.SalesModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/Mesa8050DS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

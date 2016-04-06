@@ -1,0 +1,421 @@
+<wsdl:definitions
+     name="SalesModuleService"
+     targetNamespace="/com/natica/sales/model/common/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="/com/natica/sales/model/common/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:types="/com/natica/sales/model/common/types/"
+    >
+    <wsdl:documentation>
+        <name>Sales Module</name>
+    </wsdl:documentation>
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="classpath:/META-INF/wsdl/ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="/com/natica/sales/model/common/types/" schemaLocation="SalesModuleService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="SalesModuleService_createBlockPlani">
+        <wsdl:part name="parameters" element="types:createBlockPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_createBlockPlaniResponse">
+        <wsdl:part name="parameters" element="types:createBlockPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_createGayrimenkulGorsel">
+        <wsdl:part name="parameters" element="types:createGayrimenkulGorsel"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_createGayrimenkulGorselResponse">
+        <wsdl:part name="parameters" element="types:createGayrimenkulGorselResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_createPlanGayrimenkul">
+        <wsdl:part name="parameters" element="types:createPlanGayrimenkul"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_createPlanGayrimenkulResponse">
+        <wsdl:part name="parameters" element="types:createPlanGayrimenkulResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_createVaziyetPlani">
+        <wsdl:part name="parameters" element="types:createVaziyetPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_createVaziyetPlaniResponse">
+        <wsdl:part name="parameters" element="types:createVaziyetPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deleteBlockPlani">
+        <wsdl:part name="parameters" element="types:deleteBlockPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deleteBlockPlaniResponse">
+        <wsdl:part name="parameters" element="types:deleteBlockPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deleteGayrimenkulGorsel">
+        <wsdl:part name="parameters" element="types:deleteGayrimenkulGorsel"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deleteGayrimenkulGorselResponse">
+        <wsdl:part name="parameters" element="types:deleteGayrimenkulGorselResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deletePlanGayrimenkul">
+        <wsdl:part name="parameters" element="types:deletePlanGayrimenkul"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deletePlanGayrimenkulResponse">
+        <wsdl:part name="parameters" element="types:deletePlanGayrimenkulResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deleteVaziyetPlani">
+        <wsdl:part name="parameters" element="types:deleteVaziyetPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_deleteVaziyetPlaniResponse">
+        <wsdl:part name="parameters" element="types:deleteVaziyetPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_getProjectDetails">
+        <wsdl:part name="parameters" element="types:getProjectDetails"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_getProjectDetailsResponse">
+        <wsdl:part name="parameters" element="types:getProjectDetailsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updateBlockPlani">
+        <wsdl:part name="parameters" element="types:updateBlockPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updateBlockPlaniResponse">
+        <wsdl:part name="parameters" element="types:updateBlockPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updateGayrimenkulGorsel">
+        <wsdl:part name="parameters" element="types:updateGayrimenkulGorsel"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updateGayrimenkulGorselResponse">
+        <wsdl:part name="parameters" element="types:updateGayrimenkulGorselResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updatePlanGayrimenkul">
+        <wsdl:part name="parameters" element="types:updatePlanGayrimenkul"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updatePlanGayrimenkulResponse">
+        <wsdl:part name="parameters" element="types:updatePlanGayrimenkulResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updateVaziyetPlani">
+        <wsdl:part name="parameters" element="types:updateVaziyetPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_updateVaziyetPlaniResponse">
+        <wsdl:part name="parameters" element="types:updateVaziyetPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewBlockPlani">
+        <wsdl:part name="parameters" element="types:viewBlockPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewBlockPlaniResponse">
+        <wsdl:part name="parameters" element="types:viewBlockPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewGayrimenkulGorsel">
+        <wsdl:part name="parameters" element="types:viewGayrimenkulGorsel"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewGayrimenkulGorselResponse">
+        <wsdl:part name="parameters" element="types:viewGayrimenkulGorselResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewPlanGayrimenkul">
+        <wsdl:part name="parameters" element="types:viewPlanGayrimenkul"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewPlanGayrimenkulResponse">
+        <wsdl:part name="parameters" element="types:viewPlanGayrimenkulResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewVaziyetPlani">
+        <wsdl:part name="parameters" element="types:viewVaziyetPlani"/>
+    </wsdl:message>
+    <wsdl:message name="SalesModuleService_viewVaziyetPlaniResponse">
+        <wsdl:part name="parameters" element="types:viewVaziyetPlaniResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="SalesModuleService">
+        <wsdl:documentation/>
+        <wsdl:operation name="createBlockPlani">
+            <wsdl:input message="tns:SalesModuleService_createBlockPlani"/>
+            <wsdl:output message="tns:SalesModuleService_createBlockPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createGayrimenkulGorsel">
+            <wsdl:input message="tns:SalesModuleService_createGayrimenkulGorsel"/>
+            <wsdl:output message="tns:SalesModuleService_createGayrimenkulGorselResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createPlanGayrimenkul">
+            <wsdl:input message="tns:SalesModuleService_createPlanGayrimenkul"/>
+            <wsdl:output message="tns:SalesModuleService_createPlanGayrimenkulResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createVaziyetPlani">
+            <wsdl:input message="tns:SalesModuleService_createVaziyetPlani"/>
+            <wsdl:output message="tns:SalesModuleService_createVaziyetPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteBlockPlani">
+            <wsdl:input message="tns:SalesModuleService_deleteBlockPlani"/>
+            <wsdl:output message="tns:SalesModuleService_deleteBlockPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteGayrimenkulGorsel">
+            <wsdl:input message="tns:SalesModuleService_deleteGayrimenkulGorsel"/>
+            <wsdl:output message="tns:SalesModuleService_deleteGayrimenkulGorselResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deletePlanGayrimenkul">
+            <wsdl:input message="tns:SalesModuleService_deletePlanGayrimenkul"/>
+            <wsdl:output message="tns:SalesModuleService_deletePlanGayrimenkulResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteVaziyetPlani">
+            <wsdl:input message="tns:SalesModuleService_deleteVaziyetPlani"/>
+            <wsdl:output message="tns:SalesModuleService_deleteVaziyetPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getProjectDetails">
+            <wsdl:input message="tns:SalesModuleService_getProjectDetails"/>
+            <wsdl:output message="tns:SalesModuleService_getProjectDetailsResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateBlockPlani">
+            <wsdl:input message="tns:SalesModuleService_updateBlockPlani"/>
+            <wsdl:output message="tns:SalesModuleService_updateBlockPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateGayrimenkulGorsel">
+            <wsdl:input message="tns:SalesModuleService_updateGayrimenkulGorsel"/>
+            <wsdl:output message="tns:SalesModuleService_updateGayrimenkulGorselResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updatePlanGayrimenkul">
+            <wsdl:input message="tns:SalesModuleService_updatePlanGayrimenkul"/>
+            <wsdl:output message="tns:SalesModuleService_updatePlanGayrimenkulResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateVaziyetPlani">
+            <wsdl:input message="tns:SalesModuleService_updateVaziyetPlani"/>
+            <wsdl:output message="tns:SalesModuleService_updateVaziyetPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="viewBlockPlani">
+            <wsdl:input message="tns:SalesModuleService_viewBlockPlani"/>
+            <wsdl:output message="tns:SalesModuleService_viewBlockPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="viewGayrimenkulGorsel">
+            <wsdl:input message="tns:SalesModuleService_viewGayrimenkulGorsel"/>
+            <wsdl:output message="tns:SalesModuleService_viewGayrimenkulGorselResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="viewPlanGayrimenkul">
+            <wsdl:input message="tns:SalesModuleService_viewPlanGayrimenkul"/>
+            <wsdl:output message="tns:SalesModuleService_viewPlanGayrimenkulResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="viewVaziyetPlani">
+            <wsdl:input message="tns:SalesModuleService_viewVaziyetPlani"/>
+            <wsdl:output message="tns:SalesModuleService_viewVaziyetPlaniResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SalesModuleServiceSoapHttp" type="tns:SalesModuleService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="createBlockPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/createBlockPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createGayrimenkulGorsel">
+            <soap:operation soapAction="/com/natica/sales/model/common/createGayrimenkulGorsel"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createPlanGayrimenkul">
+            <soap:operation soapAction="/com/natica/sales/model/common/createPlanGayrimenkul"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createVaziyetPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/createVaziyetPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteBlockPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/deleteBlockPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteGayrimenkulGorsel">
+            <soap:operation soapAction="/com/natica/sales/model/common/deleteGayrimenkulGorsel"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deletePlanGayrimenkul">
+            <soap:operation soapAction="/com/natica/sales/model/common/deletePlanGayrimenkul"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteVaziyetPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/deleteVaziyetPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getProjectDetails">
+            <soap:operation soapAction="/com/natica/sales/model/common/getProjectDetails"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateBlockPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/updateBlockPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateGayrimenkulGorsel">
+            <soap:operation soapAction="/com/natica/sales/model/common/updateGayrimenkulGorsel"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updatePlanGayrimenkul">
+            <soap:operation soapAction="/com/natica/sales/model/common/updatePlanGayrimenkul"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateVaziyetPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/updateVaziyetPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="viewBlockPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/viewBlockPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="viewGayrimenkulGorsel">
+            <soap:operation soapAction="/com/natica/sales/model/common/viewGayrimenkulGorsel"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="viewPlanGayrimenkul">
+            <soap:operation soapAction="/com/natica/sales/model/common/viewPlanGayrimenkul"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="viewVaziyetPlani">
+            <soap:operation soapAction="/com/natica/sales/model/common/viewVaziyetPlani"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SalesModuleService">
+        <wsdl:port name="SalesModuleServiceSoapHttpPort" binding="tns:SalesModuleServiceSoapHttp">
+            <soap:address location="http://localhost:7101/MesaSalesService/SalesModuleService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

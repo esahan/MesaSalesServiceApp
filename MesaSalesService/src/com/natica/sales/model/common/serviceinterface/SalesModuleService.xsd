@@ -1,0 +1,274 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="/com/natica/sales/model/common/types/"
+     xmlns:tns="/com/natica/sales/model/common/types/" xmlns:ns0="/com/natica/sales/model/views/common/"
+     xmlns:ns1="http://xmlns.oracle.com/adf/svc/errors/" xmlns:ns2="/com/natica/sales/model/views/response/common/">
+    <import namespace="/com/natica/sales/model/views/common/" schemaLocation="../../views/common/SmartsPlanGayrimenkulViewSDO.xsd"/>
+    <import namespace="/com/natica/sales/model/views/response/common/" schemaLocation="../../views/response/common/SmartsCrudResponseSDO.xsd"/>
+    <import namespace="http://xmlns.oracle.com/adf/svc/errors/" schemaLocation="classpath:/META-INF/wsdl/ServiceException.xsd"/>
+    <import namespace="/com/natica/sales/model/views/common/" schemaLocation="../../views/common/SmartsGyrmnklGorselViewSDO.xsd"/>
+    <import namespace="/com/natica/sales/model/views/common/" schemaLocation="../../views/common/SmartsVaziyetViewSDO.xsd"/>
+    <import namespace="/com/natica/sales/model/views/common/" schemaLocation="../../views/common/UnitsViewSDO.xsd"/>
+    <import namespace="/com/natica/sales/model/views/common/" schemaLocation="../../views/common/SmartsBlokPlaniViewSDO.xsd"/>
+    <element name="createBlockPlani">
+        <complexType>
+            <sequence>
+                <element name="projectId" type="decimal"/>
+                <element name="blokPlaniGorseli" type="string"/>
+                <element name="KoorX" type="decimal"/>
+                <element name="KoorY" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createBlockPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createGayrimenkulGorsel">
+        <complexType>
+            <sequence>
+                <element name="gayrimenkulId" type="decimal"/>
+                <element name="dosyaAdi" type="string"/>
+                <element name="baslik" type="string"/>
+                <element name="tip" type="decimal"/>
+                <element name="sira" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createGayrimenkulGorselResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createPlanGayrimenkul">
+        <complexType>
+            <sequence>
+                <element name="projectId" type="decimal"/>
+                <element name="blockPlanId" type="decimal"/>
+                <element name="gayrimenkulId" type="decimal"/>
+                <element name="Koordinat" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createPlanGayrimenkulResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createVaziyetPlani">
+        <complexType>
+            <sequence>
+                <element name="prjectId" type="decimal"/>
+                <element name="dosyaIsmi" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createVaziyetPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteBlockPlani">
+        <complexType>
+            <sequence>
+                <element name="blokPlaniId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteBlockPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteGayrimenkulGorsel">
+        <complexType>
+            <sequence>
+                <element name="GayrimenkulGorselId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteGayrimenkulGorselResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deletePlanGayrimenkul">
+        <complexType>
+            <sequence>
+                <element name="planGayrimenkulId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deletePlanGayrimenkulResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteVaziyetPlani">
+        <complexType>
+            <sequence>
+                <element name="prjectId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteVaziyetPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getProjectDetails">
+        <complexType>
+            <sequence>
+                <element name="projectId" type="int"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getProjectDetailsResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:UnitsViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateBlockPlani">
+        <complexType>
+            <sequence>
+                <element name="blokPlaniId" type="decimal"/>
+                <element name="projectId" type="decimal"/>
+                <element name="blokPlaniGorseli" type="string"/>
+                <element name="KoorX" type="decimal"/>
+                <element name="KoorY" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateBlockPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateGayrimenkulGorsel">
+        <complexType>
+            <sequence>
+                <element name="GayrimenkulGorselId" type="decimal"/>
+                <element name="gayrimenkulId" type="decimal"/>
+                <element name="dosyaAdi" type="string"/>
+                <element name="baslik" type="string"/>
+                <element name="tip" type="decimal"/>
+                <element name="sira" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateGayrimenkulGorselResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updatePlanGayrimenkul">
+        <complexType>
+            <sequence>
+                <element name="planGayrimenkulId" type="decimal"/>
+                <element name="projectId" type="decimal"/>
+                <element name="blockPlanId" type="decimal"/>
+                <element name="gayrimenkulId" type="decimal"/>
+                <element name="Koordinat" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updatePlanGayrimenkulResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateVaziyetPlani">
+        <complexType>
+            <sequence>
+                <element name="prjectId" type="decimal"/>
+                <element name="dosyaIsmi" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateVaziyetPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns2:SmartsCrudResponseSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewBlockPlani">
+        <complexType>
+            <sequence>
+                <element name="blokPlaniId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewBlockPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SmartsBlokPlaniViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewGayrimenkulGorsel">
+        <complexType>
+            <sequence>
+                <element name="GayrimenkulGorselId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewGayrimenkulGorselResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SmartsGyrmnklGorselViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewPlanGayrimenkul">
+        <complexType>
+            <sequence>
+                <element name="planGayrimenkulId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewPlanGayrimenkulResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SmartsPlanGayrimenkulViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewVaziyetPlani">
+        <complexType>
+            <sequence>
+                <element name="projectId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="viewVaziyetPlaniResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SmartsVaziyetViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

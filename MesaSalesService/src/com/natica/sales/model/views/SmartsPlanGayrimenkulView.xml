@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1254" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SmartsPlanGayrimenkulView"
+  Version="11.1.2.61.83"
+  SelectList="XxntcSmartsPlanGayrimenkul.PLAN_GAYRIMENKUL_ID, 
+       XxntcSmartsPlanGayrimenkul.PROJE_ID, 
+       XxntcSmartsPlanGayrimenkul.BLOCK_PLAN_ID, 
+       XxntcSmartsPlanGayrimenkul.GAYRIMENKUL_ID, 
+       XxntcSmartsPlanGayrimenkul.KOORDINATLAR, 
+       XxntcSmartsPlanGayrimenkul.CREATION_DATE, 
+       XxntcSmartsPlanGayrimenkul.LAST_UPDATE_DATE"
+  FromList="XXNTC.XXNTC_SMARTS_PLAN_GAYRIMENKUL XxntcSmartsPlanGayrimenkul"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  RowClass="com.natica.sales.model.views.SmartsPlanGayrimenkulViewRowImpl"
+  ComponentClass="com.natica.sales.model.views.SmartsPlanGayrimenkulViewImpl"
+  SdoGen="true"
+  SdoName="SmartsPlanGayrimenkulViewSDO"
+  SdoNameSpace="/com/natica/sales/model/views/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <EntityUsage
+    Name="XxntcSmartsPlanGayrimenkul"
+    Entity="com.natica.sales.model.entities.SmartsPlanGayrimenkul"/>
+  <ViewAttribute
+    Name="PlanGayrimenkulId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="PlanGayrimenkulId"
+    EntityUsage="XxntcSmartsPlanGayrimenkul"
+    AliasName="PLAN_GAYRIMENKUL_ID"/>
+  <ViewAttribute
+    Name="ProjeId"
+    PrecisionRule="true"
+    EntityAttrName="ProjeId"
+    EntityUsage="XxntcSmartsPlanGayrimenkul"
+    AliasName="PROJE_ID"/>
+  <ViewAttribute
+    Name="BlockPlanId"
+    PrecisionRule="true"
+    EntityAttrName="BlockPlanId"
+    EntityUsage="XxntcSmartsPlanGayrimenkul"
+    AliasName="BLOCK_PLAN_ID"/>
+  <ViewAttribute
+    Name="GayrimenkulId"
+    PrecisionRule="true"
+    EntityAttrName="GayrimenkulId"
+    EntityUsage="XxntcSmartsPlanGayrimenkul"
+    AliasName="GAYRIMENKUL_ID"/>
+  <ViewAttribute
+    Name="Koordinatlar"
+    PrecisionRule="true"
+    EntityAttrName="Koordinatlar"
+    EntityUsage="XxntcSmartsPlanGayrimenkul"
+    AliasName="KOORDINATLAR"/>
+  <ViewAttribute
+    Name="CreationDate"
+    PrecisionRule="true"
+    EntityAttrName="CreationDate"
+    EntityUsage="XxntcSmartsPlanGayrimenkul"
+    AliasName="CREATION_DATE"/>
+  <ViewAttribute
+    Name="LastUpdateDate"
+    PrecisionRule="true"
+    EntityAttrName="LastUpdateDate"
+    EntityUsage="XxntcSmartsPlanGayrimenkul"
+    AliasName="LAST_UPDATE_DATE"/>
+</ViewObject>

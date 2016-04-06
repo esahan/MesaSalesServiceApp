@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1254" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SmartsVaziyetView"
+  Version="11.1.2.61.83"
+  SelectList="XxntcSmartsVaziyet.PROJECT_ID, 
+       XxntcSmartsVaziyet.DOSYA_ISMI, 
+       XxntcSmartsVaziyet.CREATION_DATE, 
+       XxntcSmartsVaziyet.LAST_UPDATE_DATE"
+  FromList="XXNTC.XXNTC_SMARTS_VAZIYET XxntcSmartsVaziyet"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  SdoGen="true"
+  SdoName="SmartsVaziyetViewSDO"
+  SdoNameSpace="/com/natica/sales/model/views/common/"
+  RowClass="com.natica.sales.model.views.SmartsVaziyetViewRowImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <EntityUsage
+    Name="XxntcSmartsVaziyet"
+    Entity="com.natica.sales.model.entities.SmartsVaziyet"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="XxntcSmartsVaziyet"
+    AliasName="PROJECT_ID"/>
+  <ViewAttribute
+    Name="DosyaIsmi"
+    PrecisionRule="true"
+    EntityAttrName="DosyaIsmi"
+    EntityUsage="XxntcSmartsVaziyet"
+    AliasName="DOSYA_ISMI"/>
+  <ViewAttribute
+    Name="CreationDate"
+    PrecisionRule="true"
+    EntityAttrName="CreationDate"
+    EntityUsage="XxntcSmartsVaziyet"
+    AliasName="CREATION_DATE"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="LastUpdateDate"
+    PrecisionRule="true"
+    EntityAttrName="LastUpdateDate"
+    EntityUsage="XxntcSmartsVaziyet"
+    AliasName="LAST_UPDATE_DATE"
+    IsUpdateable="false"/>
+</ViewObject>

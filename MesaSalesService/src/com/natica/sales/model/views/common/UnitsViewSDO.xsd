@@ -1,0 +1,33 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="/com/natica/sales/model/views/common/"
+     xmlns="/com/natica/sales/model/views/common/" elementFormDefault="qualified" sdoJava:package="com.natica.sales.model.views.common">
+    <xsd:annotation>
+        <xsd:documentation>Units View</xsd:documentation>
+    </xsd:annotation>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="UnitsViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/"/>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="GayrimenkulId" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="ProjeId" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="ProjeAdi" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="EtapId" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="EtapAdi" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="BlokId" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="BlokAdi" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="GayrimenkulAdi" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Kat" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="DaireNo" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="DaireTipi" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Cephe" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="NetAlanM2" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="BrutAlanM2" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="GuncelListeFiyati" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="KonutStatusu" type="xsd:string" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="unitsViewSDO" type="UnitsViewSDO"/>
+</xsd:schema>

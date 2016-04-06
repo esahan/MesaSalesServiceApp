@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1254" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SmartsBlokPlani"
+  Version="11.1.2.61.83"
+  DBObjectType="table"
+  DBObjectName="XXNTC.XXNTC_SMARTS_BLOK_PLANI"
+  AliasName="XxntcSmartsBlokPlani"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="BlokPlaniId"
+    IsNotNull="true"
+    ColumnName="BLOK_PLANI_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="XXNTC.XXNTC_SMARTS_BLOK_PLANI"
+    PrimaryKey="true">
+    <TransientExpression><![CDATA[(new oracle.jbo.server.SequenceImpl("XXNTC_SMARTS_BLOK_PLANI_S",adf.object.getDBTransaction())).getSequenceNumber()]]></TransientExpression>
+  </Attribute>
+  <Attribute
+    Name="ProjectId"
+    ColumnName="PROJECT_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="XXNTC.XXNTC_SMARTS_BLOK_PLANI"/>
+  <Attribute
+    Name="BlokPlaniGorseli"
+    Precision="240"
+    ColumnName="BLOK_PLANI_GORSELI"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XXNTC.XXNTC_SMARTS_BLOK_PLANI">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="KoorX"
+    ColumnName="KOOR_X"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="XXNTC.XXNTC_SMARTS_BLOK_PLANI"/>
+  <Attribute
+    Name="KoorY"
+    ColumnName="KOOR_Y"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="XXNTC.XXNTC_SMARTS_BLOK_PLANI"/>
+  <Attribute
+    Name="CreationDate"
+    ColumnName="CREATION_DATE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="XXNTC.XXNTC_SMARTS_BLOK_PLANI"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="LastUpdateDate"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="XXNTC.XXNTC_SMARTS_BLOK_PLANI"
+    HistoryColumn="DateHistory"/>
+  <Key
+    Name="SysC001045525"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C001045525"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.natica.sales.model.entities.SmartsBlokPlani.BlokPlaniId"/>
+    </AttrArray>
+  </Key>
+</Entity>
